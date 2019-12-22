@@ -1,3 +1,4 @@
+# https://atcoder.jp/contests/abc147/tasks/abc147_b
 s = gets.chomp
 count = 0
 a = s[0...s.length/2].split('')

@@ -1,3 +1,4 @@
+# https://atcoder.jp/contests/abc147/tasks/abc147_c
 n = gets.to_i # 人数
 people = []
 n.times do
