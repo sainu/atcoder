@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+filepath = ARGV[0]
+
+require 'tempfile'
+
+if File.exist?(filepath)
+  submit_text = ''
+  submit_area = false
+  File.foreach(filepath) do |line|
+    if line == "# ----- ここから下が提出コード -----\n"
+      submit_area = true
+      next
+    end
+    submit_text += line if submit_area
+  end
+  Tempfile.create("foo") do |f|
+    f.print submit_text
+    f.rewind
+    system("cat #{f.path} | pbcopy")
+    puts 'copied!'
+  end
+end
