@@ -10,6 +10,11 @@ unless File.exist?(filepath)
 require 'bundler/setup'
 require 'pry'
 
+# ----- ここから下が提出コード -----
+def d(n)
+  Math.log10(n).to_i + 1
+end
+
     EOT
     f.puts template
   end
