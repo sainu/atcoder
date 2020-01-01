@@ -12,6 +12,7 @@ require 'pry'
 
 # ----- ここから下が提出コード -----
 def gi; gets.to_i end
+def gs; gets.chomp end
 def d(n); Math.log10(n).to_i + 1 end
 
     EOT
