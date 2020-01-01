@@ -11,9 +11,8 @@ require 'bundler/setup'
 require 'pry'
 
 # ----- ここから下が提出コード -----
-def d(n)
-  Math.log10(n).to_i + 1
-end
+def gi; gets.to_i end
+def d(n); Math.log10(n).to_i + 1 end
 
     EOT
     f.puts template
